@@ -1,0 +1,13 @@
+{
+  "name": "totallab_api",
+  "version": "1.0.0",
+  "description": "Example API using Vercel and Express.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "vercel": "^21.0.1"
+  }
+}
