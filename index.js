@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello from the API!' });
+});
+
 // Define a simple route
 app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello from the API!' });
@@ -15,8 +19,4 @@ app.use((req, res) => {
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
-});
-
-app.get("/", (req,res) => {
-  res.send("Hello World!")
 });
