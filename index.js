@@ -33,3 +33,4 @@ app.post("/validate", async (request, response) => {
         console.log(err);
     }
 });
+module.exports = app;
