@@ -1,36 +1,18 @@
 const express = require('express');
 const app = express();
-//app.use(express.json());
-const PORT = process.env.PORT || 3000;
-const { MongoClient } = require("mongodb");
-const uri = process.env['MONGO_URI'];
-const client = new MongoClient(uri);
-app.listen(PORT, () => {
-    console.log("Server Listening on PORT:", PORT);
+
+// Define a simple route
+app.get('/api/hello', (req, res) => {
+  res.json({ message: 'Hello from the API!' });
 });
-app.get('/', (req, res) => {
-    res.send('<h1>Private Validation API</h1>');
+
+// Handle 404 - Route not found
+app.use((req, res) => {
+  res.status(404).json({ error: 'Route not found' });
 });
-app.post("/validate", async (request, response) => {
-    try {
-        const db = client.db('Utils');
-        const coll = db.collection('Keys');
-        const query = { key: request.body.key };
-        const updateDoc = { $set: { used: true }, };
-        const options = {};
-        const q = await coll.findOne(query);
-        if (q) {
-            const result = await coll.updateOne(query, updateDoc, options);
-            console.log('Valid');
-            response.status(200).send('Validated');
-        }
-        else {
-            console.log('Invalid');
-            response.status(400).send('Invalid key');
-        }
-    }
-    catch (err) {
-        console.log(err);
-    }
+
+// Start the server
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
-module.exports = app;
