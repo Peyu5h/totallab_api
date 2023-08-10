@@ -1,5 +1,12 @@
 {
+<<<<<<< HEAD
   "version": 2,
   "builds": [{ "src": "index.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "index.js" }]
 }
+=======
+    "version": 2,
+    "builds": [{ "src": "index.js", "use": "@vercel/node" }],
+    "routes": [{ "src": "/(.*)", "dest": "index.js" }]
+}
+>>>>>>> bd6d672 (First commit from Fedora)

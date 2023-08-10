@@ -1,6 +1,7 @@
 {
   "name": "totallab_api",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "Example API using Vercel and Express.js",
   "main": "index.js",
   "scripts": {
@@ -9,5 +10,17 @@
   "dependencies": {
     "express": "^4.17.1",
     "vercel": "^21.0.1"
+=======
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+>>>>>>> bd6d672 (First commit from Fedora)
   }
 }
