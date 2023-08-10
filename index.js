@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Totallab Validation API!");
+  res.send("Totallab Validation API homepage!");
 });
 
 app.get("/api/hello", (req, res) => {
