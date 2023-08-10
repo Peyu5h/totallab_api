@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello from the API!');
+  res.send('Home!');
 });
 
 app.get('/api/hello', (req, res) => {
