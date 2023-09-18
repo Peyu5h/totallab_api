@@ -37,7 +37,7 @@ app.get("/api/hello", (req, res) => {
 
 app.use((req, res) => {
   //res.status(404).json({ error: "Route not found" });
-  res.status(404).send("<img src="404.svg" alt="triangle with all three sides equal" height="87" width="100" />");
+  res.status(404).sendFile('../404.svg');
 });
 
 const port = process.env.PORT || 3000;
