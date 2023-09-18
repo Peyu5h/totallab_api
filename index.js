@@ -39,7 +39,7 @@ app.get("/api/hello", (req, res) => {
 app.use((req, res) => {
   //res.status(404).json({ error: "Route not found" });
   //res.status(404).sendFile(__dirname + '/404.svg'); // works
-  res.status(404).send("<img src="/404.svg"/>");
+  res.status(404).sendFile(__dirname + '/404.html');
 });
 
 const port = process.env.PORT || 3000;
