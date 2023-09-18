@@ -3,7 +3,7 @@ const express = require("express");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const mongoUri = process.env.MONGO_URI;
 const app = express();
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 const client = new MongoClient(mongoUri, {
   serverApi: {
     version: ServerApiVersion.v1,
